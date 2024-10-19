@@ -35,25 +35,29 @@
       <!-- Query Type Section (Radio Buttons) -->
       <section class="query-type">
         <fieldset aria-required="true">
-            <legend>Query Type</legend>
+            <div class="legend-container">
+                <legend>Query Type</legend>
+                <span class="required-input">*</span>
+            </div>
 
             <div class="radio-group">
                 <!-- General Radio Button -->
                 <label class="radio-option">
                     <input type="radio" id="general" name="query-type" value="general" required aria-describedby="query-error" aria-invalid="false">
-                    General Enquiry
+                    <span>General Enquiry</span>
                 </label>
 
                 <!-- Support Radio Button -->
                 <label class="radio-option">
                     <input type="radio" id="support" name="query-type" value="support" required aria-describedby="query-error" aria-invalid="false">
-                    Support Request
+                    <span>Support Request</span>
                 </label>
-                
+
                 <p id="query-error" class="query-error form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
             </div>
         </fieldset>
       </section>
+
 
 
       <!-- Message Section -->
@@ -89,5 +93,6 @@
       Coded by <a href="#">Claudia Dom</a>.
     </div>
   </footer>
+<script src="main.js"></script>
 </body>
 </html>

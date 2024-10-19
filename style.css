@@ -167,14 +167,36 @@ button:hover {
     accent-color: var(--clr-green-600);
 }
 
+.legend-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.radio-option span{
+    color: black;
+}
+
+.legend-container legend {
+    margin-right: 5px;
+}
+
+span.required-input {
+    font-size: 2rem;
+}
+
+.required-input {
+    color: var(--clr-green-600); /* or any color you prefer for the asterisk */
+}
+
 .toast-container {
+    display: none;
+    /* display: grid; */
     position: absolute;
     top: 4rem;
     background-color: hsl(171, 83%, 14%);;
     padding: 1.5rem;
     border: 1px solid var(--clr-grey-900);
-    border-radius: 1rem;
-    display: grid;
+    border-radius: .4rem;
     gap: 1rem;
 }
 
