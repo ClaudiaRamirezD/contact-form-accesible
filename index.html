@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="A responsive FORM  built using HTML, CSS, and JavaScript. Perfect for improving frontend development skills. With Web Accesibility as a priority">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">Contact Us</h1>
+    <form id="contact-form" novalidate>
+      <section class="name-section">
+        <label for="first-name">First Name <span class="required-input">*</span></label>
+        <input type="text" id="first-name" name="first-name" required aria-required="true" aria-describedby="first-name-error" aria-invalid="false">
+        <p id="first-name-error" class="form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+        
+        <label for="last-name">Last Name <span class="required-input">*</span></label>
+        <input type="text" id="last-name" name="last-name" required aria-required="true" aria-describedby="last-name-error" aria-invalid="false">
+        <p id="last-name-error" class="form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+      </section>
+
+      <!-- Email Section -->
+      <section class="email-section">
+        <label for="email">Email Address <span class="required-input">*</span></label>
+        <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error" aria-invalid="false">
+        <p id="email-error" class="form-alert" aria-live="polite" aria-hidden="true">Please enter a valid email address</p>
+      </section>
+
+      <!-- Query Type Section (Radio Buttons) -->
+      <section class="query-type">
+        <fieldset aria-required="true">
+            <legend>Query Type</legend>
+
+            <div class="radio-group">
+                <!-- General Radio Button -->
+                <label class="radio-option">
+                    <input type="radio" id="general" name="query-type" value="general" required aria-describedby="query-error" aria-invalid="false">
+                    General Enquiry
+                </label>
+
+                <!-- Support Radio Button -->
+                <label class="radio-option">
+                    <input type="radio" id="support" name="query-type" value="support" required aria-describedby="query-error" aria-invalid="false">
+                    Support Request
+                </label>
+                
+                <p id="query-error" class="query-error form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+            </div>
+        </fieldset>
+      </section>
+
+
+      <!-- Message Section -->
+      <section class="message-section">
+        <label for="message">Message <span class="required-input">*</span></label>
+        <textarea id="message" name="message" required aria-required="true" aria-describedby="message-error" aria-invalid="false"></textarea>
+        <p id="message-error" class="form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+      </section>
+
+      <!-- Consent Section (Checkbox) -->
+      <section class="consent-section">
+        <label for="consent" class="consent-text">
+          <input type="checkbox" id="consent" name="consent" required aria-required="true" aria-describedby="consent-error" aria-invalid="false">
+          I consent to being contacted by the team <span class="required-input">*</span>
+        </label>
+        <p id="consent-error" class="form-alert" aria-live="polite" aria-hidden="true">To submit this form, please consent to being contacted</p>
+      </section>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <div class="toast-container">
+    <div class="toast-header">
+      <img src="/assets/images/icon-success-check.svg" alt="Success-check">
+      <p class="toast-title">Message Sent!</p>
+    </div>
+    <p class="toast-message">Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Claudia Dom</a>.
+    </div>
+  </footer>
+</body>
+</html>

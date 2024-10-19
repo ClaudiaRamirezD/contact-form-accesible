@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "Karla", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    src: 
+        url('assets/fonts/Karla-VariableFont_wght.ttf') format(truetype),
+        url('assets/fonts/Karla-Italic-VariableFont_wght.ttf') format(truetype);
+}
+
+:root {
+    --ff: "Karla", sans-serif;
+    --fs-labels: 1.6rem;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --clr-green-200: hsl(148, 38%, 91%);
+    --clr-green-600: hsl(169, 82%, 27%);
+    --clr-red: hsl(0, 66%, 54%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey-500: hsl(186, 15%, 59%);
+    --clr-grey-900: hsl(187, 24%, 22%);
+}
+
+body {
+    font-family: var(--ff);
+    background-color: var(--clr-green-200);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    margin-block: 4rem;
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    width: clamp(36rem, 26.0000rem + 26.6667vw, 50rem);
+    display: grid;
+    gap: 2rem;
+}
+
+#contact-form {
+    display: grid;
+    gap: 1rem;
+}
+
+#message {
+    height: 18rem;
+    padding: .5rem;
+    line-height: 1.5;
+    border: 1px solid var(--clr-grey-500);
+    border-radius: .4rem;
+}
+
+#message:focus {
+    border-color: var(--clr-green-600) ;
+    outline: none;
+}
+
+.consent-text {
+    font-weight: var(--fw-bold);
+    color: var(--clr-grey-500);
+    display: flex;
+    align-items: center; /* Center checkbox vertically */
+    justify-content: flex-start; /* Align text and checkbox to the left */
+    gap: .5rem;
+    line-height: 1.5;
+    font-size: 1.4rem;
+    cursor: pointer;
+    
+}
+
+label, legend {
+    font-size: var(--fs-labels);
+    padding-top: 2rem;
+}
+
+input #consent {
+    margin-right: 1.5rem;
+}
+
+span {
+    color: var(--clr-green-600);
+}
+
+section {
+    display: grid;
+    gap: 1rem;
+}
+
+
+input {
+    border: 1px solid var(--clr-grey-500);
+    border-radius: .4rem;
+    padding: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    border: .15rem solid var(--clr-green-600);
+}
+
+.radio-group {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+    border: 1px solid var(--clr-grey-500);
+    border-radius: .4rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+/* Apply focus to the whole radio-option container */
+.radio-option input[type="radio"]:focus-visible {
+    outline: none;
+}
+
+/* For keyboard navigation, visually highlight focused radio-option */
+/* :focus-within: This targets the entire .radio-option container when any child element (in this case, the radio input) is focused. This allows the entire radio option to change its border color and background when the radio button is focused. */
+.radio-option:focus-within {
+    border-color: var(--clr-green-600); /* Change border color on focus */
+    background-color: var(--clr-green-200); /* Optional background color */
+}
+
+
+
+.radio-label {
+    padding-top: 0;
+    padding-left: .7rem;
+}
+
+.form-alert {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--clr-green-600);
+    padding: 1.5rem;
+    font-weight: var(--fw-bold);
+    border-radius: .4rem;
+    color: var(--clr-white);
+    margin-top: 2.5rem;
+}
+
+button:hover {
+    background-color: hsl(171, 83%, 14%);
+}
+
+/* Change the color of checkboxes */
+.consent-text input[type="checkbox"] {
+    accent-color: var(--clr-green-600);
+}
+
+/* Change the color of radio buttons */
+.query-type input[type="radio"] {
+    accent-color: var(--clr-green-600);
+}
+
+.toast-container {
+    position: absolute;
+    top: 4rem;
+    background-color: hsl(171, 83%, 14%);;
+    padding: 1.5rem;
+    border: 1px solid var(--clr-grey-900);
+    border-radius: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.toast-header {
+    display: flex;
+    gap: 1rem;
+    color: var(--clr-white);
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.toast-message {
+    font-size: 1.2rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-green-200);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* If you want to hide the legend visually but keep it for screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
