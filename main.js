@@ -99,16 +99,22 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!validateForm()) {
         e.preventDefault(); // Prevent form submission if validation fails
         } else {
-        // Show the toast message by changing the display property
-        const toastContainer = document.querySelector(".toast-container");
-        toastContainer.style.display = "grid";
+          // Show the toast message by changing the display property
+            const toastContainer = document.querySelector(".toast-container");
+            toastContainer.style.display = "grid";
 
-        // Optionally, hide the toast message after a few seconds
-        setTimeout(() => {
+            // Scroll to the top where the toast appears
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth", // Smooth scrolling to the top
+            });
+
+            // Optionally, hide the toast message after a few seconds
+            setTimeout(() => {
             toastContainer.style.display = "none";
-        }, 3000); // Hide after 3 seconds
+          }, 3000); // Hide after 3 seconds
 
-        e.preventDefault(); // Prevent the actual form submission for demo purposes
+          e.preventDefault(); // Prevent the actual form submission for demo purposes
         }
     });
 });
