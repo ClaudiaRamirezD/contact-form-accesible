@@ -33,7 +33,7 @@ body {
     background-color: var(--clr-white);
     border-radius: 1rem;
     padding: 3rem 2rem;
-    width: clamp(36rem, 26.0000rem + 26.6667vw, 50rem);
+    width: clamp(36rem, 25.7887rem + 27.2300vw, 65rem);
     display: grid;
     gap: 2rem;
 }
@@ -141,6 +141,7 @@ input[type="checkbox"]:focus {
 
 .form-alert {
     display: none;
+    color: var(--clr-red);
 }
 
 button {
@@ -185,7 +186,7 @@ span.required-input {
 }
 
 .required-input {
-    color: var(--clr-green-600); /* or any color you prefer for the asterisk */
+    color: var(--clr-green-600);
 }
 
 .toast-container {
@@ -227,4 +228,29 @@ span.required-input {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+.query-error{
+    padding-top: 1rem;
+}
+
+.name-section div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 48em) {
+    .name-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .radio-group{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
 }

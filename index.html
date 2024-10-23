@@ -16,13 +16,17 @@
     <h1 class="title">Contact Us</h1>
     <form id="contact-form" novalidate>
       <section class="name-section">
-        <label for="first-name">First Name <span class="required-input">*</span></label>
-        <input type="text" id="first-name" name="first-name" required aria-required="true" aria-describedby="first-name-error" aria-invalid="false">
-        <p id="first-name-error" class="form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+        <div>
+          <label for="first-name">First Name <span class="required-input">*</span></label>
+          <input type="text" id="first-name" name="first-name" required aria-required="true" aria-describedby="first-name-error" aria-invalid="false">
+          <p id="first-name-error" class="form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+        </div>
         
-        <label for="last-name">Last Name <span class="required-input">*</span></label>
-        <input type="text" id="last-name" name="last-name" required aria-required="true" aria-describedby="last-name-error" aria-invalid="false">
-        <p id="last-name-error" class="form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+        <div>
+          <label for="last-name">Last Name <span class="required-input">*</span></label>
+          <input type="text" id="last-name" name="last-name" required aria-required="true" aria-describedby="last-name-error" aria-invalid="false">
+          <p id="last-name-error" class="form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+        </div>
       </section>
 
       <!-- Email Section -->
@@ -52,9 +56,8 @@
                     <input type="radio" id="support" name="query-type" value="support" required aria-describedby="query-error" aria-invalid="false">
                     <span>Support Request</span>
                 </label>
-
-                <p id="query-error" class="query-error form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
-            </div>
+              </div>
+              <p id="query-error" class="query-error form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
         </fieldset>
       </section>
 
