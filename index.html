@@ -38,27 +38,26 @@
 
       <!-- Query Type Section (Radio Buttons) -->
       <section class="query-type">
-        <fieldset>
-            <div class="legend-container">
-                <legend>Query Type</legend>
-                <span class="required-input">*</span>
-            </div>
+        <fieldset aria-required="true">
+          <legend>Query Type <span class="required-input">*</span></legend>
 
-            <div class="radio-group">
-                <!-- General Radio Button -->
-                <label class="radio-option">
-                    <input type="radio" id="general" name="query-type" value="general" required aria-describedby="query-error" aria-invalid="true">
-                    <span>General Enquiry</span>
-                </label>
+          <div class="radio-group">
+              <!-- General Radio Button -->
+              <label class="radio-option">
+                  <input type="radio" id="general" name="query-type" value="general" required aria-describedby="query-error" aria-invalid="true">
+                  <span>General Enquiry</span>
+              </label>
 
-                <!-- Support Radio Button -->
-                <label class="radio-option">
-                    <input type="radio" id="support" name="query-type" value="support" required aria-describedby="query-error" aria-invalid="true">
-                    <span>Support Request</span>
-                </label>
-              </div>
-              <p id="query-error" class="query-error form-alert" aria-live="assertive" aria-hidden="true">This field is required</p>
+              <!-- Support Radio Button -->
+              <label class="radio-option">
+                  <input type="radio" id="support" name="query-type" value="support" required aria-describedby="query-error" aria-invalid="true">
+                  <span>Support Request</span>
+              </label>
+          </div>
+
+          <p id="query-error" class="query-error form-alert" aria-live="assertive" aria-hidden="true">This field is required</p>
         </fieldset>
+
       </section>
 
 
@@ -66,7 +65,7 @@
       <!-- Message Section -->
       <section class="message-section">
         <label for="message">Message <span class="required-input">*</span></label>
-        <textarea id="message" name="message" required aria-required="true" aria-describedby="message-error" aria-invalid="false"></textarea>
+        <textarea id="message" name="message" required  aria-describedby="message-error" aria-invalid="false"></textarea>
         <p id="message-error" class="form-alert" aria-live="assertive" aria-hidden="true">This field is required</p>
       </section>
 
