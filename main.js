@@ -99,22 +99,37 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!validateForm()) {
         e.preventDefault(); // Prevent form submission if validation fails
         } else {
-          // Show the toast message by changing the display property
-            const toastContainer = document.querySelector(".toast-container");
+        // Show the toast message by changing the display property
+        const toastContainer = document.querySelector(".toast-container");
+
+        // Temporarily remove the toast for screen reader accessibility
+        toastContainer.style.display = "none";
+        toastContainer.setAttribute("aria-hidden", "true");
+
+        // Remove the element from the DOM
+        toastContainer.parentNode.removeChild(toastContainer);
+
+        // Reinsert the element after a brief delay to trigger announcement
+        setTimeout(() => {
+            document.body.appendChild(toastContainer);
             toastContainer.style.display = "grid";
+            toastContainer.setAttribute("aria-hidden", "false"); // Ensure it's not hidden for screen readers
+            toastContainer.setAttribute("role", "alert"); // Alert role for screen readers
 
             // Scroll to the top where the toast appears
             window.scrollTo({
-                top: 0,
-                behavior: "smooth", // Smooth scrolling to the top
+            top: 0,
+            behavior: "smooth", // Smooth scrolling to the top
             });
+        }, 100); // Brief delay before reinserting
 
-            // Optionally, hide the toast message after a few seconds
-            setTimeout(() => {
+        // Optionally, hide the toast message after a few seconds
+        setTimeout(() => {
             toastContainer.style.display = "none";
-          }, 3000); // Hide after 3 seconds
+            toastContainer.setAttribute("aria-hidden", "true"); // Hide it for screen readers
+        }, 3000); // Hide after 3 seconds
 
-          e.preventDefault(); // Prevent the actual form submission for demo purposes
+        e.preventDefault(); // Prevent the actual form submission for demo purposes
         }
     });
 });

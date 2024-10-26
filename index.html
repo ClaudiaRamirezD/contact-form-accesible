@@ -19,13 +19,13 @@
         <div>
           <label for="first-name">First Name <span class="required-input">*</span></label>
           <input type="text" id="first-name" name="first-name" required aria-required="true" aria-describedby="first-name-error" aria-invalid="false">
-          <p id="first-name-error" class="form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+          <p id="first-name-error" class="form-alert" aria-live="assertive" aria-hidden="true">This field is required</p>
         </div>
         
         <div>
           <label for="last-name">Last Name <span class="required-input">*</span></label>
           <input type="text" id="last-name" name="last-name" required aria-required="true" aria-describedby="last-name-error" aria-invalid="false">
-          <p id="last-name-error" class="form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+          <p id="last-name-error" class="form-alert" aria-live="assertive" aria-hidden="true">This field is required</p>
         </div>
       </section>
 
@@ -33,12 +33,12 @@
       <section class="email-section">
         <label for="email">Email Address <span class="required-input">*</span></label>
         <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error" aria-invalid="false">
-        <p id="email-error" class="form-alert" aria-live="polite" aria-hidden="true">Please enter a valid email address</p>
+        <p id="email-error" class="form-alert" aria-live="assertive" aria-hidden="true">Please enter a valid email address</p>
       </section>
 
       <!-- Query Type Section (Radio Buttons) -->
       <section class="query-type">
-        <fieldset aria-required="true">
+        <fieldset>
             <div class="legend-container">
                 <legend>Query Type</legend>
                 <span class="required-input">*</span>
@@ -47,17 +47,17 @@
             <div class="radio-group">
                 <!-- General Radio Button -->
                 <label class="radio-option">
-                    <input type="radio" id="general" name="query-type" value="general" required aria-describedby="query-error" aria-invalid="false">
+                    <input type="radio" id="general" name="query-type" value="general" required aria-describedby="query-error" aria-invalid="true">
                     <span>General Enquiry</span>
                 </label>
 
                 <!-- Support Radio Button -->
                 <label class="radio-option">
-                    <input type="radio" id="support" name="query-type" value="support" required aria-describedby="query-error" aria-invalid="false">
+                    <input type="radio" id="support" name="query-type" value="support" required aria-describedby="query-error" aria-invalid="true">
                     <span>Support Request</span>
                 </label>
               </div>
-              <p id="query-error" class="query-error form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+              <p id="query-error" class="query-error form-alert" aria-live="assertive" aria-hidden="true">This field is required</p>
         </fieldset>
       </section>
 
@@ -67,7 +67,7 @@
       <section class="message-section">
         <label for="message">Message <span class="required-input">*</span></label>
         <textarea id="message" name="message" required aria-required="true" aria-describedby="message-error" aria-invalid="false"></textarea>
-        <p id="message-error" class="form-alert" aria-live="polite" aria-hidden="true">This field is required</p>
+        <p id="message-error" class="form-alert" aria-live="assertive" aria-hidden="true">This field is required</p>
       </section>
 
       <!-- Consent Section (Checkbox) -->
@@ -76,13 +76,13 @@
           <input type="checkbox" id="consent" name="consent" required aria-required="true" aria-describedby="consent-error" aria-invalid="false">
           I consent to being contacted by the team <span class="required-input">*</span>
         </label>
-        <p id="consent-error" class="form-alert" aria-live="polite" aria-hidden="true">To submit this form, please consent to being contacted</p>
+        <p id="consent-error" class="form-alert" aria-live="assertive" aria-hidden="true">To submit this form, please consent to being contacted</p>
       </section>
 
       <button type="submit">Submit</button>
     </form>
   </main>
-  <div class="toast-container">
+  <div class="toast-container" aria-live="assertive" aria-atomic="true" style="display: none;">
     <div class="toast-header">
       <img src="/assets/images/icon-success-check.svg" alt="Success-check">
       <p class="toast-title">Message Sent!</p>
